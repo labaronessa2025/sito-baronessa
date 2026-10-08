@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Baronessa — Frutta e verdura a Galatina e Galatone</title>
+<meta name="description" content="La Baronessa: frutta e verdura di stagione, prodotti puliti e tagliati ogni mattina nel nostro laboratorio e consegna a domicilio. Ci trovi a Galatina (via Festa del Lavoro 14) e a Galatone (via Aldo Moro 112). Ordina su WhatsApp.">
+<meta property="og:title" content="La Baronessa — Frutta e verdura a Galatina e Galatone">
+<meta property="og:description" content="Frutta e verdura di stagione, prodotti pronti dal nostro laboratorio e consegna a domicilio. Ordina su WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://labaronessafrutta.it/">
+<meta property="og:image" content="https://labaronessafrutta.it/img/zucca.jpg">
+<link rel="canonical" href="https://labaronessafrutta.it/">
+<meta name="theme-color" content="#1e6b34">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231e6b34'/%3E%3Cpath d='M17 24l7 6 8-11 8 11 7-6-3 15H20z' fill='%2394c11f'/%3E%3Ccircle cx='32' cy='48' r='5' fill='%23f07a2b'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FruitAndVegetableStore",
+      "@id": "https://labaronessafrutta.it/#galatina",
+      "name": "La Baronessa — Galatina",
+      "url": "https://labaronessafrutta.it/",
+      "image": "https://labaronessafrutta.it/logo.png",
+      "description": "Frutta e verdura di stagione, prodotti puliti e tagliati ogni mattina nel nostro laboratorio, consegna a domicilio.",
+      "address": {"@type": "PostalAddress", "streetAddress": "Via Festa del Lavoro 14", "postalCode": "73013", "addressLocality": "Galatina", "addressRegion": "LE", "addressCountry": "IT"},
+      "telephone": "+393427532905",
+      "sameAs": ["https://www.instagram.com/la_baronessa_frutta_verdura/"],
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "06:00", "closes": "13:30"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "16:30", "closes": "20:30"}
+      ],
+      "areaServed": "Galatina, Galatone e paesi vicini"
+    },
+    {
+      "@type": "FruitAndVegetableStore",
+      "@id": "https://labaronessafrutta.it/#galatone",
+      "name": "La Baronessa — Galatone",
+      "url": "https://labaronessafrutta.it/",
+      "image": "https://labaronessafrutta.it/logo.png",
+      "telephone": "+393427532905",
+      "address": {"@type": "PostalAddress", "streetAddress": "Via Aldo Moro 112", "postalCode": "73044", "addressLocality": "Galatone", "addressRegion": "LE", "addressCountry": "IT"},
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "06:00", "closes": "13:30"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "16:30", "closes": "20:30"}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+@font-face{font-family:"Bricolage";src:url(fonts/bricolage.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Figtree";src:url(fonts/figtree-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Figtree";src:url(fonts/figtree-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Figtree";src:url(fonts/figtree-700.woff2) format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  --foglia:#1e6b34;      /* verde del logo */
+  --bosco:#123f20;       /* verde profondo per testi e fondi scuri */
+  --lime:#94c11f;        /* verde chiaro del logo */
+  --cachi:#f07a2b;       /* arancio dei cachi e della zucca */
+  --latte:#fafbf5;       /* fondo chiaro */
+  --salvia:#e9efdc;      /* fondo delle fasce */
+  --inchiostro:#132a1b;
+  --muto:#4f6152;
+  --display:"Bricolage",ui-sans-serif,system-ui,sans-serif;
+  --testo:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--testo);background:var(--latte);color:var(--inchiostro);line-height:1.55;font-size:18px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);font-optical-sizing:auto;letter-spacing:-.02em;line-height:.98}
+h2{font-size:clamp(40px,7vw,78px);font-weight:800;color:var(--foglia)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;transition:transform .2s ease,background-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--cachi);outline-offset:3px}
+.btn-lime{background:var(--lime);color:var(--bosco)}
+.btn-lime:hover{background:#a6d42c}
+.btn-vuoto{border:2px solid currentColor}
+.wa{width:20px;height:20px;flex:none}
+
+/* ── apertura ─────────────────────────────── */
+.hero{background:var(--foglia);color:#fff;position:relative;overflow:hidden;padding:26px 0 0}
+.hero::after{content:"";position:absolute;left:-12%;bottom:-38%;width:70vw;height:70vw;max-width:900px;max-height:900px;border-radius:50%;background:var(--bosco);opacity:.45;z-index:0}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:2}
+.logo{background:#fff;border-radius:18px;padding:10px 16px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.logo img{height:52px;width:auto}
+.stato{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.12);font-weight:600;font-size:15px;white-space:nowrap}
+.stato i{width:10px;height:10px;border-radius:50%;background:#cfd8cf}
+.stato.si i{background:var(--lime);box-shadow:0 0 0 0 rgba(148,193,31,.7);animation:pulsa 2s infinite}
+.stato.no i{background:var(--cachi)}
+@keyframes pulsa{70%{box-shadow:0 0 0 10px rgba(148,193,31,0)}100%{box-shadow:0 0 0 0 rgba(148,193,31,0)}}
+
+.hero-griglia{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;position:relative;z-index:1;padding:46px 0 0}
+.hero h1{font-size:clamp(54px,9.6vw,128px);font-weight:800}
+.hero h1 .riga{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .riga span{display:block;animation:sali .9s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 .riga:nth-child(2) span{animation-delay:.12s;color:var(--lime)}
+.hero h1 .riga:nth-child(3) span{animation-delay:.24s}
+@keyframes sali{from{transform:translateY(105%)}to{transform:none}}
+.hero .sotto{font-size:clamp(18px,2.2vw,21px);max-width:540px;margin:22px 0 28px;opacity:.92;animation:appari .8s .45s both}
+.hero .azioni{display:flex;flex-wrap:wrap;gap:12px;animation:appari .8s .6s both;padding-bottom:64px}
+@keyframes appari{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* foto che si alternano */
+.vetrina{position:relative;height:clamp(420px,58vw,620px);align-self:stretch}
+.vetrina figure{position:absolute;border-radius:28px 28px 0 0;overflow:hidden;inset:0 0 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.25)}
+.vetrina img{width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.4s ease,transform 7s linear}
+.vetrina img.on{opacity:1;transform:scale(1)}
+.vetrina .didascalia{position:absolute;left:18px;bottom:18px;background:rgba(18,63,32,.82);backdrop-filter:blur(6px);color:#fff;font-weight:600;font-size:15px;padding:9px 14px;border-radius:12px;z-index:2}
+.bollo{position:absolute;right:-14px;top:30px;z-index:3;width:128px;height:128px;border-radius:50%;background:var(--cachi);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-size:19px;line-height:1.02;transform:rotate(-10deg);box-shadow:0 12px 28px rgba(0,0,0,.25);animation:timbro .7s .9s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes timbro{from{transform:rotate(-30deg) scale(0)}to{transform:rotate(-10deg) scale(1)}}
+.bollo span{display:block}
+
+/* ── nastro di stagione ───────────────────── */
+.nastro{background:var(--lime);color:var(--bosco);overflow:hidden;padding:20px 0;border-block:3px solid var(--bosco)}
+.nastro .scorre{display:flex;width:max-content;animation:scorri 38s linear infinite}
+.nastro:hover .scorre{animation-play-state:paused}
+.nastro ul{display:flex;list-style:none;font-family:var(--display);font-weight:800;font-size:clamp(28px,4.4vw,52px);letter-spacing:-.01em;white-space:nowrap}
+.nastro li{padding:0 26px;display:flex;align-items:center;gap:52px}
+.nastro li::after{content:"";width:16px;height:16px;border-radius:50%;background:var(--cachi);margin-left:26px}
+@keyframes scorri{to{transform:translateX(-50%)}}
+
+/* ── laboratorio ──────────────────────────── */
+.lab{padding:110px 0}
+.lab-griglia{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.lab-foto{position:relative}
+.lab-foto img{border-radius:30px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.lab-foto .piccola{position:absolute;width:44%;right:-30px;bottom:-40px;border:8px solid var(--latte);border-radius:26px;aspect-ratio:1;object-fit:cover}
+.lab p.lead{font-size:clamp(19px,2.2vw,23px);color:var(--muto);margin:22px 0 30px;max-width:520px}
+.lista{list-style:none;display:grid;gap:14px;margin-bottom:34px}
+.lista li{display:flex;gap:16px;align-items:baseline;font-size:19px;border-bottom:2px solid var(--salvia);padding-bottom:14px}
+.lista b{font-family:var(--display);font-size:24px;color:var(--foglia);min-width:9.5ch}
+.btn-foglia{background:var(--foglia);color:#fff}
+.btn-foglia:hover{background:var(--bosco)}
+
+/* ── galleria ─────────────────────────────── */
+.galleria{background:var(--bosco);color:#fff;padding:90px 0 100px}
+.galleria h2{color:#fff;max-width:12ch}
+.galleria .intesta{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.galleria .intesta p{max-width:380px;opacity:.85}
+.striscia{--bordo:max(22px,calc((100vw - 1180px)/2 + 22px));display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--bordo) 18px;scroll-padding-inline:var(--bordo);scrollbar-width:thin;scrollbar-color:var(--lime) transparent}
+.striscia figure{flex:0 0 clamp(240px,30vw,340px);scroll-snap-align:start;border-radius:24px;overflow:hidden;position:relative;aspect-ratio:3/4;background:#0c2a15}
+.striscia img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.striscia figure:hover img{transform:scale(1.06)}
+.striscia figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(10,30,16,.85));font-family:var(--display);font-weight:700;font-size:24px}
+.nota-foto{font-size:14px;opacity:.6;margin-top:10px}
+
+/* ── punti vendita ────────────────────────── */
+.negozi{padding:110px 0}
+.negozi h2{margin-bottom:16px}
+.intro-negozi{font-size:20px;color:var(--muto);max-width:640px;margin-bottom:40px}
+.intro-negozi a{color:var(--foglia);font-weight:700}
+.coppia{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.negozio{border-radius:32px;padding:40px 36px 36px;position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column}
+.negozio.galatina{background:var(--foglia);color:#fff}
+.negozio.galatone{background:var(--cachi);color:#fff}
+.negozio h3{font-size:clamp(48px,6vw,76px);font-weight:800;margin-bottom:14px}
+.negozio .via{font-size:21px;font-weight:500;opacity:.95}
+.negozio ul{list-style:none;margin:22px 0 28px;display:grid;gap:8px}
+.negozio li{padding-left:28px;position:relative}
+.negozio li::before{content:"";position:absolute;left:0;top:.42em;width:14px;height:14px;border-radius:50%;background:var(--lime)}
+.negozio.galatone li::before{background:#fff}
+.negozio .azioni{margin-top:auto;display:flex;gap:12px;flex-wrap:wrap}
+.negozio .btn-bianco{background:#fff;color:var(--bosco)}
+.negozio .cerchio{position:absolute;right:-70px;top:-70px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.08)}
+
+/* ── orari ────────────────────────────────── */
+.orari{background:var(--salvia);padding:90px 0}
+.orari-griglia{display:grid;grid-template-columns:1fr;gap:30px}
+.orari-griglia > div:first-child{display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}
+.orari p{color:var(--muto);max-width:420px;font-size:19px}
+.giorni{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+.giorno{background:var(--latte);border-radius:20px;padding:20px 10px;text-align:center;border:2px solid transparent}
+.giorno b{display:block;font-family:var(--display);font-size:22px;color:var(--foglia);margin-bottom:8px}
+.giorno span{display:block;font-size:16px;color:var(--muto);line-height:1.35;font-variant-numeric:tabular-nums}
+.giorno.oggi{border-color:var(--foglia);background:#fff}
+.giorno.oggi b::after{content:"oggi";display:block;font-family:var(--testo);font-size:12px;font-weight:700;color:var(--cachi);letter-spacing:.02em;margin-top:2px}
+.giorno.chiuso b{color:var(--muto)}
+
+/* ── chiusura ─────────────────────────────── */
+.ordina{background:var(--lime);color:var(--bosco);padding:100px 0;text-align:center}
+.ordina h2{color:var(--bosco);font-size:clamp(46px,9vw,112px)}
+.ordina p{font-size:21px;max-width:560px;margin:20px auto 34px}
+.btn-bosco{background:var(--bosco);color:#fff;font-size:19px;padding:19px 32px}
+.btn-bosco:hover{background:#0b2a15}
+
+footer{background:var(--bosco);color:#dfe8d6;padding:56px 0 40px;font-size:16px}
+.piede{display:grid;grid-template-columns:auto 1fr 1fr auto;gap:36px;align-items:start}
+.piede .logo{display:inline-block;justify-self:start}
+.piede .logo img{height:42px}
+.piede h4{font-family:var(--display);font-size:20px;color:#fff;margin-bottom:6px}
+footer a{color:var(--lime)}
+.legale{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.15);font-size:14px;opacity:.75;display:flex;flex-wrap:wrap;gap:6px 24px}
+
+/* ── schermi piccoli ──────────────────────── */
+@media (max-width:860px){
+  .hero-griglia,.lab-griglia,.orari-griglia,.coppia{grid-template-columns:1fr}
+  .hero-griglia{gap:10px}
+  .hero .azioni{padding-bottom:34px}
+  .vetrina{height:420px;margin:0 -22px}
+  .vetrina figure{border-radius:28px 28px 0 0}
+  .bollo{right:14px;top:-20px;width:104px;height:104px;font-size:16px}
+  .lab{padding:80px 0}
+  .lab-foto .piccola{right:-6px;bottom:-26px}
+  .lab-griglia{gap:60px}
+  .negozi,.orari,.ordina{padding:72px 0}
+  .giorni{grid-template-columns:repeat(2,1fr)}
+  .giorno{display:flex;justify-content:space-between;align-items:center;text-align:left;padding:14px 16px}
+  .giorno b{margin:0;font-size:19px}
+  .giorno.oggi b::after{display:inline;margin-left:8px}
+  .giorni .giorno:last-child{grid-column:span 2}
+  .piede{grid-template-columns:1fr 1fr}
+  .piede > :first-child{grid-column:span 2}
+}
+@media (max-width:480px){
+  body{font-size:17px}
+  .btn{width:100%}
+  .barra .stato{font-size:13px;padding:8px 12px}
+  .logo img{height:40px}
+  .negozio{padding:32px 24px 26px;min-height:0}
+  .giorni{grid-template-columns:1fr}
+  .giorni .giorno:last-child{grid-column:auto}
+  .piede{grid-template-columns:1fr}
+  .piede > :first-child{grid-column:auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .vetrina img.on{transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="barra">
+      <a class="logo" href="#" aria-label="La Baronessa"><img src="logo.png" alt="La Baronessa" width="1000" height="298"></a>
+      <div class="stato" id="stato" role="status"><i></i><span id="statoTesto">Orari in fondo alla pagina</span></div>
+    </div>
+    <div class="hero-griglia">
+      <div>
+        <h1><span class="riga"><span>Frutta</span></span><span class="riga"><span>di stagione,</span></span><span class="riga"><span>ogni mattina.</span></span></h1>
+        <p class="sotto">Ogni mattina, appena apriamo, nel nostro laboratorio puliamo e tagliamo frutta e verdura. Passa a trovarci o ordina: te le portiamo a casa.</p>
+        <div class="azioni">
+          <a class="btn btn-lime" href="https://wa.me/393427532905?text=Buongiorno%2C%20vorrei%20ordinare%3A%20" rel="noopener">
+            <svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+            Ordina su WhatsApp</a>
+          <a class="btn btn-vuoto" href="#negozi">Dove siamo</a>
+        </div>
+      </div>
+      <div class="vetrina" aria-label="Foto dei prodotti di stagione">
+        <div class="bollo" aria-hidden="true"><span>Consegna<br>a domicilio</span></div>
+        <figure>
+          <img class="on" src="img/zucca.jpg" alt="Zucca intera e a spicchi su un tavolo di legno" data-nome="Zucca">
+          <img src="img/cachi.jpg" alt="Cachi maturi sul ramo e su una pietra" data-nome="Cachi" loading="lazy">
+          <img src="img/laboratorio.jpg" alt="Verdure tagliate a cubetti su un tagliere" data-nome="Dal laboratorio" loading="lazy">
+          <img src="img/minestrone.jpg" alt="Una ciotola di minestrone di verdure" data-nome="Minestrone pronto" loading="lazy">
+          <div class="didascalia" id="didascalia">Zucca</div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STAGIONE:INIZIO (Jarvis aggiorna questo elenco ogni settimana; la seconda lista ripete la prima per lo scorrimento continuo) -->
+<div class="nastro" aria-label="Di stagione adesso: zucca, castagne, cachi, melagrana, uva, mele, pere, cavolfiore, broccoli, cime di rapa, finocchi, cicoria">
+  <div class="scorre" aria-hidden="true">
+    <ul><li>Zucca</li><li>Castagne</li><li>Cachi</li><li>Melagrana</li><li>Uva</li><li>Mele</li><li>Pere</li><li>Cavolfiore</li><li>Broccoli</li><li>Cime di rapa</li><li>Finocchi</li><li>Cicoria</li></ul>
+    <ul><li>Zucca</li><li>Castagne</li><li>Cachi</li><li>Melagrana</li><li>Uva</li><li>Mele</li><li>Pere</li><li>Cavolfiore</li><li>Broccoli</li><li>Cime di rapa</li><li>Finocchi</li><li>Cicoria</li></ul>
+  </div>
+</div>
+<!-- STAGIONE:FINE -->
+
+<main>
+  <section class="lab">
+    <div class="wrap lab-griglia">
+      <div class="lab-foto">
+        <img src="img/laboratorio.jpg" alt="Verdure fresche tagliate a cubetti su un tagliere" loading="lazy">
+        <img class="piccola" src="img/basilico.jpg" alt="Un mazzo di basilico fresco in un vaso di vetro" loading="lazy">
+      </div>
+      <div>
+        <h2>Il nostro laboratorio</h2>
+        <p class="lead">Ogni mattina, appena aperto, puliamo e tagliamo frutta e verdura. Tu le trovi pronte sul banco, o le ricevi a casa.</p>
+        <ul class="lista">
+          <li><b>Minestrone</b>verdure miste già pulite e tagliate</li>
+          <li><b>Da cuocere</b>verdure pronte per la padella o il forno</li>
+          <li><b>Da mangiare</b>frutta sbucciata e tagliata, in vaschetta</li>
+        </ul>
+        <a class="btn btn-foglia" href="https://wa.me/393427532905?text=Buongiorno%2C%20cosa%20avete%20di%20pronto%20oggi%3F" rel="noopener">Chiedi cosa c'è di pronto oggi</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="galleria">
+    <div class="wrap intesta">
+      <h2>Dal banco alla tavola</h2>
+      <p>Idee semplici con quello che è di stagione. Ne pubblichiamo una al giorno su Instagram.</p>
+    </div>
+    <div class="striscia" tabindex="0" aria-label="Galleria di ricette e prodotti, scorri lateralmente">
+      <figure><img src="img/zucca.jpg" alt="Zucca e spicchi di zucca" loading="lazy"><figcaption>Zucca al forno</figcaption></figure>
+      <figure><img src="img/minestrone.jpg" alt="Minestrone di verdure" loading="lazy"><figcaption>Minestrone</figcaption></figure>
+      <figure><img src="img/sugo.jpg" alt="Sugo di pomodoro sul fuoco" loading="lazy"><figcaption>Sugo con basilico</figcaption></figure>
+      <figure><img src="img/cachi.jpg" alt="Cachi maturi" loading="lazy"><figcaption>Cachi</figcaption></figure>
+      <figure><img src="img/zuppa.jpg" alt="Zuppa di verdure con crostini" loading="lazy"><figcaption>Zuppa d'autunno</figcaption></figure>
+      <figure><img src="img/basilico.jpg" alt="Basilico fresco" loading="lazy"><figcaption>Basilico</figcaption></figure>
+    </div>
+    <div class="wrap">
+      <a class="btn btn-lime" style="margin-top:30px" href="https://www.instagram.com/la_baronessa_frutta_verdura/" rel="noopener">Seguici su Instagram</a>
+    </div>
+  </section>
+
+  <section class="negozi" id="negozi">
+    <div class="wrap">
+      <h2>Dove siamo</h2>
+      <p class="intro-negozi">Passa da noi a Galatina o a Galatone, con gli stessi orari. Per ordinare, un solo numero WhatsApp: <a href="https://wa.me/393427532905">342 753 2905</a>.</p>
+      <div class="coppia">
+        <article class="negozio galatina">
+          <div class="cerchio"></div>
+          <h3>Galatina</h3>
+          <p class="via">Via Festa del Lavoro 14<br>73013 Galatina (LE)</p>
+          <div class="azioni">
+            <a class="btn btn-bianco" href="https://www.google.com/maps/search/?api=1&query=La+Baronessa+Via+Festa+del+Lavoro+14+Galatina" rel="noopener">Indicazioni</a>
+          </div>
+        </article>
+        <article class="negozio galatone">
+          <div class="cerchio"></div>
+          <h3>Galatone</h3>
+          <p class="via">Via Aldo Moro 112<br>73044 Galatone (LE)</p>
+          <div class="azioni">
+            <a class="btn btn-bianco" href="https://www.google.com/maps/search/?api=1&query=La+Baronessa+Via+Aldo+Moro+112+Galatone" rel="noopener">Indicazioni</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="orari">
+    <div class="wrap orari-griglia">
+      <div>
+        <h2>Orari</h2>
+        <p>A Galatina e a Galatone. La domenica ci riposiamo.</p>
+      </div>
+      <div class="giorni" id="giorni">
+        <div class="giorno" data-g="1"><b>Lun</b><span>6:00–13:30<br>16:30–20:30</span></div>
+        <div class="giorno" data-g="2"><b>Mar</b><span>6:00–13:30<br>16:30–20:30</span></div>
+        <div class="giorno" data-g="3"><b>Mer</b><span>6:00–13:30<br>16:30–20:30</span></div>
+        <div class="giorno" data-g="4"><b>Gio</b><span>6:00–13:30<br>16:30–20:30</span></div>
+        <div class="giorno" data-g="5"><b>Ven</b><span>6:00–13:30<br>16:30–20:30</span></div>
+        <div class="giorno" data-g="6"><b>Sab</b><span>6:00–13:30<br>16:30–20:30</span></div>
+        <div class="giorno chiuso" data-g="0"><b>Dom</b><span>Chiuso</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ordina">
+    <div class="wrap">
+      <h2>Fai la spesa da casa</h2>
+      <p>Scrivi su WhatsApp cosa ti serve e dove sei. Ti rispondiamo noi, senza app e senza registrazioni, e te la portiamo a casa.</p>
+      <a class="btn btn-bosco" href="https://wa.me/393427532905?text=Buongiorno%2C%20vorrei%20ordinare%3A%20" rel="noopener">
+        <svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+        Ordina al 342 753 2905</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="piede">
+      <span class="logo"><img src="logo.png" alt="La Baronessa" width="1000" height="298"></span>
+      <div><h4>Galatina</h4>Via Festa del Lavoro 14<br>73013 Galatina (LE)</div>
+      <div><h4>Galatone</h4>Via Aldo Moro 112<br>73044 Galatone (LE)</div>
+      <div><h4>Contatti</h4>WhatsApp <a href="https://wa.me/393427532905">342 753 2905</a><br><a href="https://www.instagram.com/la_baronessa_frutta_verdura/" rel="noopener">Instagram</a></div>
+    </div>
+    <div class="legale">
+      <!-- DATI-SOCIETA (dalla visura CCIAA Lecce del 04/05/2022; P.IVA = C.F., confermata da Raffaele 08/10/2026) -->
+      <span>La Baronessa S.r.l.s. · Sede legale: Via Festa del Lavoro 14, 73013 Galatina (LE) · C.F. e P.IVA 05168400751 · REA LE-347048 · Capitale sociale € 1.000 i.v.</span>
+      <span>Questo sito non usa cookie né strumenti di tracciamento: gli ordini passano da WhatsApp.</span>
+      <span>Le foto sono illustrative.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // aperto ora (ora italiana): lunedì-sabato 6:00-13:30 e 16:30-20:30, domenica chiuso
+  try{
+    var p=new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var g={dom:0,lun:1,mar:2,mer:3,gio:4,ven:5,sab:6};
+    var w=p.find(function(x){return x.type==='weekday'}).value.replace('.','').toLowerCase().slice(0,3);
+    var h=+p.find(function(x){return x.type==='hour'}).value, m=+p.find(function(x){return x.type==='minute'}).value;
+    var gg=g[w], t=h*60+m, el=document.getElementById('stato'), tx=document.getElementById('statoTesto');
+    document.querySelectorAll('#giorni .giorno').forEach(function(d){ if(+d.dataset.g===gg) d.classList.add('oggi'); });
+    if(gg===0){ el.className='stato no'; tx.textContent='Oggi chiuso, riapriamo lunedì alle 6:00'; }
+    else{
+      var a=(t>=360&&t<810)||(t>=990&&t<1230);
+      if(a){ el.className='stato si'; tx.textContent='Aperti ora, fino alle '+(t<810?'13:30':'20:30'); }
+      else { el.className='stato no'; tx.textContent='Chiusi ora, '+(t<360?'apriamo alle 6:00':(t<990?'riapriamo alle 16:30':(gg===6?'riapriamo lunedì alle 6:00':'riapriamo domani alle 6:00'))); }
+    }
+  }catch(e){}
+  // foto dell'apertura che si alternano ogni 4,5 secondi (ferme se il visitatore ha chiesto meno animazioni)
+  var imgs=[].slice.call(document.querySelectorAll('.vetrina img')), cap=document.getElementById('didascalia'), i=0;
+  if(imgs.length>1 && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    setInterval(function(){
+      imgs[i].classList.remove('on'); i=(i+1)%imgs.length; imgs[i].classList.add('on'); cap.textContent=imgs[i].dataset.nome;
+    },4500);
+  }
+})();
+</script>
+</body>
+</html>
