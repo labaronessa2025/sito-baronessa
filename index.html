@@ -72,8 +72,7 @@ h2{font-size:clamp(40px,7vw,78px);font-weight:800;color:var(--foglia)}
 .wa{width:20px;height:20px;flex:none}
 
 /* ── apertura ─────────────────────────────── */
-.hero{background:var(--foglia);color:#fff;position:relative;overflow:hidden;padding:26px 0 0}
-.hero::after{content:"";position:absolute;left:-12%;bottom:-38%;width:70vw;height:70vw;max-width:900px;max-height:900px;border-radius:50%;background:var(--bosco);opacity:.45;z-index:0}
+.hero{background:radial-gradient(120% 90% at 75% 40%,#2a8443 0%,var(--foglia) 45%,var(--bosco) 100%);color:#fff;position:relative;overflow:hidden;padding:26px 0 0;min-height:min(860px,92vh);display:flex;flex-direction:column}
 .barra{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:2}
 .logo{background:#fff;border-radius:18px;padding:10px 16px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .logo img{height:52px;width:auto}
@@ -83,24 +82,35 @@ h2{font-size:clamp(40px,7vw,78px);font-weight:800;color:var(--foglia)}
 .stato.no i{background:var(--cachi)}
 @keyframes pulsa{70%{box-shadow:0 0 0 10px rgba(148,193,31,0)}100%{box-shadow:0 0 0 0 rgba(148,193,31,0)}}
 
-.hero-griglia{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;position:relative;z-index:1;padding:46px 0 0}
+.hero > .wrap{flex:1;display:flex;flex-direction:column;width:100%}
+.hero-griglia{flex:1;display:flex;align-items:flex-end;padding:46px 0 0}
+.hero-testo{max-width:620px}
 .hero h1{font-size:clamp(54px,9.6vw,128px);font-weight:800}
 .hero h1 .riga{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .riga span{display:block;animation:sali .9s cubic-bezier(.2,.8,.2,1) both}
 .hero h1 .riga:nth-child(2) span{animation-delay:.12s;color:var(--lime)}
 .hero h1 .riga:nth-child(3) span{animation-delay:.24s}
 @keyframes sali{from{transform:translateY(105%)}to{transform:none}}
+.hero h1{text-shadow:0 6px 30px rgba(10,40,20,.35)}
 .hero .sotto{font-size:clamp(18px,2.2vw,21px);max-width:540px;margin:22px 0 28px;opacity:.92;animation:appari .8s .45s both}
 .hero .azioni{display:flex;flex-wrap:wrap;gap:12px;animation:appari .8s .6s both;padding-bottom:64px}
 @keyframes appari{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
-/* foto che si alternano */
-.vetrina{position:relative;height:clamp(420px,58vw,620px);align-self:stretch}
-.vetrina figure{position:absolute;border-radius:28px 28px 0 0;overflow:hidden;inset:0 0 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.25)}
-.vetrina img{width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity 1.4s ease,transform 7s linear}
-.vetrina img.on{opacity:1;transform:scale(1)}
-.vetrina .didascalia{position:absolute;left:18px;bottom:18px;background:rgba(18,63,32,.82);backdrop-filter:blur(6px);color:#fff;font-weight:600;font-size:15px;padding:9px 14px;border-radius:12px;z-index:2}
-.bollo{position:absolute;right:-14px;top:30px;z-index:3;width:128px;height:128px;border-radius:50%;background:var(--cachi);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-size:19px;line-height:1.02;transform:rotate(-10deg);box-shadow:0 12px 28px rgba(0,0,0,.25);animation:timbro .7s .9s cubic-bezier(.3,1.6,.5,1) both}
+/* scena 3D */
+.scena{position:absolute;inset:0;z-index:1;pointer-events:none}
+.scena canvas,.scena .poster{position:absolute;inset:0;width:100%;height:100%}
+.scena canvas{pointer-events:auto;cursor:grab;opacity:0;transition:opacity .8s ease;touch-action:pan-y}
+.scena.pronta canvas{opacity:1}
+.scena .poster{object-fit:cover;object-position:right center;transition:opacity .8s ease}
+.scena.pronta .poster{opacity:0}
+.hero .wrap{position:relative;z-index:2;pointer-events:none}
+.hero .wrap a,.hero .wrap .stato{pointer-events:auto}
+.nome-frutto{position:absolute;z-index:3;right:6%;bottom:44px;background:#fff;color:var(--bosco);font-family:var(--display);font-weight:800;font-size:26px;padding:10px 20px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.25);opacity:0;transform:translateY(12px) scale(.9);transition:opacity .25s ease,transform .35s cubic-bezier(.3,1.5,.5,1);pointer-events:none}
+.nome-frutto.on{opacity:1;transform:none}
+.suggerimento{position:absolute;z-index:3;right:6%;bottom:48px;color:rgba(255,255,255,.8);font-size:15px;font-weight:600;display:flex;gap:8px;align-items:center;pointer-events:none;transition:opacity .4s}
+.suggerimento svg{width:22px;height:22px}
+.suggerimento.via{opacity:0}
+.bollo{position:absolute;right:4%;top:110px;z-index:3;width:128px;height:128px;border-radius:50%;background:var(--cachi);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-size:19px;line-height:1.02;transform:rotate(-10deg);box-shadow:0 12px 28px rgba(0,0,0,.25);animation:timbro .7s 1.3s cubic-bezier(.3,1.6,.5,1) both}
 @keyframes timbro{from{transform:rotate(-30deg) scale(0)}to{transform:rotate(-10deg) scale(1)}}
 .bollo span{display:block}
 
@@ -116,9 +126,12 @@ h2{font-size:clamp(40px,7vw,78px);font-weight:800;color:var(--foglia)}
 /* ── laboratorio ──────────────────────────── */
 .lab{padding:110px 0}
 .lab-griglia{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
-.lab-foto{position:relative}
+.lab-foto{position:relative;perspective:1100px}
+.lab-foto .strati{position:relative;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,-8deg));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.lab-foto img{box-shadow:0 30px 60px rgba(18,63,32,.28)}
 .lab-foto img{border-radius:30px;aspect-ratio:4/5;object-fit:cover;width:100%}
-.lab-foto .piccola{position:absolute;width:44%;right:-30px;bottom:-40px;border:8px solid var(--latte);border-radius:26px;aspect-ratio:1;object-fit:cover}
+.lab-foto .piccola{position:absolute;width:44%;right:-30px;bottom:-40px;border:8px solid var(--latte);border-radius:26px;aspect-ratio:1;object-fit:cover;transform:translateZ(90px)}
+.lab-foto .etichetta{position:absolute;left:-18px;top:34px;transform:translateZ(130px) rotate(-6deg);background:var(--cachi);color:#fff;font-family:var(--display);font-weight:800;font-size:22px;line-height:1;padding:14px 18px;border-radius:18px;box-shadow:0 16px 30px rgba(0,0,0,.2)}
 .lab p.lead{font-size:clamp(19px,2.2vw,23px);color:var(--muto);margin:22px 0 30px;max-width:520px}
 .lista{list-style:none;display:grid;gap:14px;margin-bottom:34px}
 .lista li{display:flex;gap:16px;align-items:baseline;font-size:19px;border-bottom:2px solid var(--salvia);padding-bottom:14px}
@@ -131,8 +144,8 @@ h2{font-size:clamp(40px,7vw,78px);font-weight:800;color:var(--foglia)}
 .galleria h2{color:#fff;max-width:12ch}
 .galleria .intesta{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
 .galleria .intesta p{max-width:380px;opacity:.85}
-.striscia{--bordo:max(22px,calc((100vw - 1180px)/2 + 22px));display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--bordo) 18px;scroll-padding-inline:var(--bordo);scrollbar-width:thin;scrollbar-color:var(--lime) transparent}
-.striscia figure{flex:0 0 clamp(240px,30vw,340px);scroll-snap-align:start;border-radius:24px;overflow:hidden;position:relative;aspect-ratio:3/4;background:#0c2a15}
+.striscia{--bordo:max(22px,calc((100vw - 1180px)/2 + 22px));display:flex;gap:18px;perspective:1100px;padding-top:30px!important;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--bordo) 18px;scrollbar-width:thin;scrollbar-color:var(--lime) transparent;padding-bottom:44px!important}
+.striscia figure{flex:0 0 clamp(240px,30vw,340px);scroll-snap-align:center;transform:rotateY(var(--ang,0deg)) translateZ(var(--z,0px));transform-origin:center;will-change:transform;box-shadow:0 26px 50px rgba(0,0,0,.35);border-radius:24px;overflow:hidden;position:relative;aspect-ratio:3/4;background:#0c2a15}
 .striscia img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .striscia figure:hover img{transform:scale(1.06)}
 .striscia figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(10,30,16,.85));font-family:var(--display);font-weight:700;font-size:24px}
@@ -185,14 +198,19 @@ footer a{color:var(--lime)}
 
 /* ── schermi piccoli ──────────────────────── */
 @media (max-width:860px){
-  .hero-griglia,.lab-griglia,.orari-griglia,.coppia{grid-template-columns:1fr}
-  .hero-griglia{gap:10px}
+  .lab-griglia,.orari-griglia,.coppia{grid-template-columns:1fr}
+  .hero{min-height:0}
+  .hero-griglia{padding-top:calc(min(68vw,400px) + 28px)}
+  .scena{bottom:auto;height:calc(min(68vw,400px) + 170px)}
+  .scena .poster{object-position:center}
   .hero .azioni{padding-bottom:34px}
-  .vetrina{height:420px;margin:0 -22px}
-  .vetrina figure{border-radius:28px 28px 0 0}
-  .bollo{right:14px;top:-20px;width:104px;height:104px;font-size:16px}
+  .bollo{right:14px;top:96px;width:84px;height:84px;font-size:13px}
+  .nome-frutto,.suggerimento{left:22px;right:auto;top:104px;bottom:auto}
+  .suggerimento{font-size:13px}
+  .nome-frutto{font-size:20px;padding:8px 16px}
   .lab{padding:80px 0}
   .lab-foto .piccola{right:-6px;bottom:-26px}
+  .lab-foto .etichetta{left:10px;top:16px;font-size:18px;transform:translateZ(50px) rotate(-6deg)}
   .lab-griglia{gap:60px}
   .negozi,.orari,.ordina{padding:72px 0}
   .giorni{grid-template-columns:repeat(2,1fr)}
@@ -216,7 +234,7 @@ footer a{color:var(--lime)}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
-  .vetrina img.on{transform:none}
+  .striscia figure,.lab-foto .strati{transform:none!important}
 }
 </style>
 </head>
@@ -229,7 +247,7 @@ footer a{color:var(--lime)}
       <div class="stato" id="stato" role="status"><i></i><span id="statoTesto">Orari in fondo alla pagina</span></div>
     </div>
     <div class="hero-griglia">
-      <div>
+      <div class="hero-testo">
         <h1><span class="riga"><span>Frutta</span></span><span class="riga"><span>di stagione,</span></span><span class="riga"><span>ogni mattina.</span></span></h1>
         <p class="sotto">Ogni mattina, appena apriamo, nel nostro laboratorio puliamo e tagliamo frutta e verdura. Passa a trovarci o ordina: te le portiamo a casa.</p>
         <div class="azioni">
@@ -239,18 +257,15 @@ footer a{color:var(--lime)}
           <a class="btn btn-vuoto" href="#negozi">Dove siamo</a>
         </div>
       </div>
-      <div class="vetrina" aria-label="Foto dei prodotti di stagione">
-        <div class="bollo" aria-hidden="true"><span>Consegna<br>a domicilio</span></div>
-        <figure>
-          <img class="on" src="img/zucca.jpg" alt="Zucca intera e a spicchi su un tavolo di legno" data-nome="Zucca">
-          <img src="img/cachi.jpg" alt="Cachi maturi sul ramo e su una pietra" data-nome="Cachi" loading="lazy">
-          <img src="img/laboratorio.jpg" alt="Verdure tagliate a cubetti su un tagliere" data-nome="Dal laboratorio" loading="lazy">
-          <img src="img/minestrone.jpg" alt="Una ciotola di minestrone di verdure" data-nome="Minestrone pronto" loading="lazy">
-          <div class="didascalia" id="didascalia">Zucca</div>
-        </figure>
-      </div>
     </div>
   </div>
+  <div class="scena" id="scena" aria-hidden="true">
+    <picture><source media="(max-width:860px)" srcset="img/scena-m.webp"><img class="poster" id="poster" src="img/scena.webp" alt="" fetchpriority="high"></picture>
+    <canvas id="tela"></canvas>
+  </div>
+  <div class="bollo" aria-hidden="true"><span>Consegna<br>a domicilio</span></div>
+  <div class="suggerimento" id="sugg" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V5a2 2 0 0 1 4 0v5"/><path d="M13 10a2 2 0 0 1 4 0v1a2 2 0 0 1 4 0v4a6 6 0 0 1-6 6h-2a6 6 0 0 1-5-2.7L5 15a2 2 0 0 1 3.4-2L9 14"/></svg>Tocca un frutto</div>
+  <div class="nome-frutto" id="nomeFrutto" role="status" aria-live="polite"></div>
 </header>
 
 <!-- STAGIONE:INIZIO (Jarvis aggiorna questo elenco ogni settimana; la seconda lista ripete la prima per lo scorrimento continuo) -->
@@ -265,9 +280,12 @@ footer a{color:var(--lime)}
 <main>
   <section class="lab">
     <div class="wrap lab-griglia">
-      <div class="lab-foto">
-        <img src="img/laboratorio.jpg" alt="Verdure fresche tagliate a cubetti su un tagliere" loading="lazy">
-        <img class="piccola" src="img/basilico.jpg" alt="Un mazzo di basilico fresco in un vaso di vetro" loading="lazy">
+      <div class="lab-foto" id="labFoto">
+        <div class="strati">
+          <img src="img/laboratorio.jpg" alt="Verdure fresche tagliate a cubetti su un tagliere" loading="lazy">
+          <img class="piccola" src="img/basilico.jpg" alt="Un mazzo di basilico fresco in un vaso di vetro" loading="lazy">
+          <span class="etichetta" aria-hidden="true">Pronto<br>ogni mattina</span>
+        </div>
       </div>
       <div>
         <h2>Il nostro laboratorio</h2>
@@ -380,13 +398,40 @@ footer a{color:var(--lime)}
       else { el.className='stato no'; tx.textContent='Chiusi ora, '+(t<360?'apriamo alle 6:00':(t<990?'riapriamo alle 16:30':(gg===6?'riapriamo lunedì alle 6:00':'riapriamo domani alle 6:00'))); }
     }
   }catch(e){}
-  // foto dell'apertura che si alternano ogni 4,5 secondi (ferme se il visitatore ha chiesto meno animazioni)
-  var imgs=[].slice.call(document.querySelectorAll('.vetrina img')), cap=document.getElementById('didascalia'), i=0;
-  if(imgs.length>1 && !matchMedia('(prefers-reduced-motion: reduce)').matches){
-    setInterval(function(){
-      imgs[i].classList.remove('on'); i=(i+1)%imgs.length; imgs[i].classList.add('on'); cap.textContent=imgs[i].dataset.nome;
-    },4500);
+  var poco=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // galleria in 3D: le foto ai lati ruotano verso il centro mentre scorri
+  var st=document.querySelector('.striscia'), figs=[].slice.call(st.querySelectorAll('figure'));
+  function flusso(){
+    var c=st.getBoundingClientRect(), mezzo=c.left+c.width/2;
+    figs.forEach(function(f){
+      var r=f.getBoundingClientRect(), d=(r.left+r.width/2-mezzo)/(c.width/2);
+      d=Math.max(-1.4,Math.min(1.4,d));
+      f.style.setProperty('--ang',(-d*28).toFixed(2)+'deg');
+      f.style.setProperty('--z',(-Math.abs(d)*120).toFixed(1)+'px');
+    });
   }
+  if(!poco){
+    var att=false; function pianifica(){ if(!att){att=true;requestAnimationFrame(function(){att=false;flusso();});} }
+    st.addEventListener('scroll',pianifica,{passive:true}); addEventListener('resize',pianifica); flusso();
+    // foto del laboratorio: si inclinano seguendo il mouse, oppure lo scorrimento della pagina sul telefono
+    var lab=document.getElementById('labFoto'), strati=lab.querySelector('.strati');
+    if(matchMedia('(hover: hover)').matches){
+      lab.addEventListener('pointermove',function(e){ var r=lab.getBoundingClientRect(); strati.style.setProperty('--ry',((e.clientX-r.left)/r.width*24-12).toFixed(1)+'deg'); strati.style.setProperty('--rx',(-((e.clientY-r.top)/r.height*16-8)).toFixed(1)+'deg'); });
+      lab.addEventListener('pointerleave',function(){ strati.style.removeProperty('--ry'); strati.style.removeProperty('--rx'); });
+    } else {
+      addEventListener('scroll',function(){ var r=lab.getBoundingClientRect(), k=(r.top+r.height/2)/innerHeight-.5; strati.style.setProperty('--ry',(k*-22).toFixed(1)+'deg'); strati.style.setProperty('--rx',(k*10).toFixed(1)+'deg'); },{passive:true});
+    }
+  }
+  // scena 3D: si carica dopo la pagina; se il telefono non supporta il 3D resta l'immagine
+  var box=document.getElementById('scena'), sugg=document.getElementById('sugg'), nome=document.getElementById('nomeFrutto'), tNome;
+  function prova3d(){ try{ var c=document.createElement('canvas'); return !!(window.WebGLRenderingContext && (c.getContext('webgl2')||c.getContext('webgl'))); }catch(e){ return false; } }
+  if(prova3d()){
+    var carica=function(){ import('./js/scena.js').then(function(m){
+      m.avvia(document.getElementById('tela'),{onNome:function(n){ sugg.classList.add('via'); nome.textContent=n; nome.classList.add('on'); clearTimeout(tNome); tNome=setTimeout(function(){nome.classList.remove('on');},1600); }});
+      requestAnimationFrame(function(){ requestAnimationFrame(function(){ box.classList.add('pronta'); }); });
+    }).catch(function(){ sugg.classList.add('via'); }); };
+    if(document.readyState==='complete') carica(); else addEventListener('load',carica);
+  } else { sugg.classList.add('via'); }
 })();
 </script>
 </body>
